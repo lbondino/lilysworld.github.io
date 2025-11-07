@@ -1,0 +1,1056 @@
+/* === GLOBAL VARIABLES (actualizadas) === */
+:root {
+  /* 🎨 PALETA PRINCIPAL */
+  --color-primary: #7046ff;
+  /* violeta principal (hero, títulos) */
+  --color-accent: #42d9f4;
+  /* celeste acento (hover, botones) */
+  --color-highlight: #a25cff;
+  /* lila intermedio */
+  --color-bg: #fffafc;
+  /* fondo base */
+  --color-bg-alt: #f9f7ff;
+  /* fondo secundario */
+  --color-text: #333333;
+  /* texto general */
+  --color-text-light: #555555;
+  /* texto gris medio */
+  --color-text-muted: #999999;
+  /* texto gris claro */
+  --color-white: #ffffff;
+
+  /* 💡 COLORES DE CADA TIENDA */
+  --color-zazzle-bg: #e5d4ff;
+  --color-zazzle-text: #4b1e9c;
+  --color-redbubble-bg: #c9edff;
+  --color-redbubble-text: #005b76;
+  --color-teepublic-bg: #ffd8e3;
+  --color-teepublic-text: #7a0045;
+
+  /* 🖋️ TIPOGRAFÍA */
+  --font-main: 'Poppins', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-h1: 2.3rem;
+  --font-size-h2: 1.9rem;
+  --font-size-h3: 1.2rem;
+
+  /* 📏 ESPACIADOS */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+
+  /* 🧱 BORDES Y SOMBRAS */
+  --border-radius: 12px;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- RESET GLOBAL --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-light);
+  text-align: center;
+  font-family: var(--font-main);
+}
+
+/* === GLOBAL HEADINGS (base neutra) === */
+h1,
+h2,
+h3 {
+  font-family: var(--font-main);
+  line-height: 1.2;
+}
+
+/* Solo aplica color principal si no hay uno definido localmente */
+h1:not([style]),
+h2:not([style]),
+h3:not([style]) {
+  color: var(--color-primary);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  margin-bottom: var(--spacing-medium);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--spacing-small);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  margin-bottom: var(--spacing-small);
+}
+
+
+/* --- HEADER --- */
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* --- NAVBAR (ACTUALIZADA Y OPTIMIZADA CON VARIABLES) --- */
+.nav {
+  position: relative;
+  margin-top: 0;
+  background: color-mix(in srgb, var(--color-highlight) 15%, transparent);
+  backdrop-filter: blur(8px);
+  padding: 12px 0;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--color-highlight) 10%, transparent);
+  z-index: 5;
+}
+
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  background: color-mix(in srgb, var(--color-highlight) 30%, transparent);
+  color: var(--color-white);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--color-highlight) 40%, transparent);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.nav a.active {
+  background: color-mix(in srgb, var(--color-highlight) 35%, transparent);
+  color: var(--color-white);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--color-highlight) 40%, transparent);
+  cursor: default;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- HERO --- */
+.hero {
+  margin-top: 40px;
+  /* separa del menú */
+  margin-bottom: 40px;
+}
+
+.hero h1,
+.hero h2 {
+  font-size: var(--font-size-h1);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-small);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+}
+
+
+/* --- STORE CARDS --- */
+.stores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.card {
+  width: 260px;
+  border-radius: var(--border-radius);
+  padding: 30px 20px;
+  background: var(--color-white);
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* --- COLORS --- */
+.card.zazzle {
+  background-color: var(--color-zazzle-bg);
+  color: var(--color-zazzle-text);
+}
+
+.card.redbubble {
+  background-color: var(--color-redbubble-bg);
+  color: var(--color-redbubble-text);
+}
+
+.card.teepublic {
+  background-color: var(--color-teepublic-bg);
+  color: var(--color-teepublic-text);
+}
+
+
+/* --- BUTTONS --- */
+.btn {
+  display: inline-block;
+  background: var(--color-white);
+  color: var(--color-text);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--color-highlight);
+  color: var(--color-white);
+}
+
+
+/* --- FOOTER --- */
+.footer {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+
+/* --- DECORACIÓN DE FONDO --- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(162, 92, 255, 0.25) 2px, transparent 2px),
+    radial-gradient(circle at 85% 30%, rgba(66, 217, 244, 0.25) 3px, transparent 2px),
+    radial-gradient(circle at 70% 80%, rgba(255, 216, 230, 0.25) 2px, transparent 2px),
+    radial-gradient(circle at 40% 60%, rgba(162, 92, 255, 0.15) 4px, transparent 2px),
+    radial-gradient(circle at 10% 90%, rgba(66, 217, 244, 0.15) 3px, transparent 2px);
+  background-size: 200px 200px;
+  animation: twinkle 8s ease-in-out infinite alternate;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+/* --- BANNER FULL WIDTH --- */
+.banner {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.banner-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+/* --- LOGO SOBRE EL BANNER --- */
+.logo-img {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  width: 140px;
+  height: auto;
+  z-index: 10;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+  transition: all 0.3s ease;
+}
+
+/* --- CONTACT PAGE --- */
+/* --- CONTACT PAGE --- */
+.contact {
+  text-align: center;
+  margin: 60px auto;
+  padding: 50px 20px;
+  max-width: 700px;
+
+  /* 🌸 Mejora visual: fondo translúcido coherente con el resto del sitio */
+  background: color-mix(in srgb, var(--color-white) 60%, transparent);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--color-highlight) 10%, transparent);
+  backdrop-filter: blur(6px);
+}
+
+.contact h2 {
+  color: var(--color-primary);
+  font-size: var(--font-size-h2);
+  margin-bottom: 10px;
+}
+
+.contact p {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Campos del formulario */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid color-mix(in srgb, var(--color-highlight) 20%, transparent);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: var(--font-main);
+}
+
+/* Enfocado */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-highlight);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--color-highlight) 20%, transparent);
+}
+
+
+.contact .btn {
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(90deg, var(--color-highlight), var(--color-accent));
+  color: var(--color-white);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px color-mix(in srgb, var(--color-highlight) 40%, transparent);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  /* necesario para el brillo */
+}
+
+/* Brillo animado (igual que el .btn-store) */
+.contact .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -75%;
+  }
+
+  100% {
+    left: 125%;
+  }
+}
+
+.contact .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px color-mix(in srgb, var(--color-highlight) 60%, transparent);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-highlight));
+}
+
+
+/* --- THANK YOU PAGE --- */
+/* --- THANK YOU PAGE (optimizada y coherente) --- */
+.thankyou {
+  text-align: center;
+  margin: 100px auto;
+  padding: 60px 20px;
+  max-width: 700px;
+
+  /* Fondo translúcido y brillo suave como el resto del sitio */
+  background: color-mix(in srgb, var(--color-white) 60%, transparent);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--color-highlight) 10%, transparent);
+  backdrop-filter: blur(6px);
+
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.thankyou h1 {
+  color: var(--color-primary);
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.thankyou p {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Botón principal coherente con el resto */
+.thankyou .btn {
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(90deg, var(--color-highlight), var(--color-accent));
+  color: var(--color-white);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px color-mix(in srgb, var(--color-highlight) 40%, transparent);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Brillo animado (igual al resto de los botones destacados) */
+.thankyou .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  animation: shimmer 4s infinite;
+}
+
+.thankyou .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px color-mix(in srgb, var(--color-highlight) 60%, transparent);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-highlight));
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- RESPONSIVE DESIGN FINAL --- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .stores {
+    gap: 15px;
+  }
+
+  .card {
+    width: 220px;
+    padding: 20px;
+  }
+
+  .logo-img {
+    width: 100px;
+    left: 35px;
+    top: 48%;
+    transform: translateY(-50%);
+  }
+
+  .banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Celulares */
+@media (max-width: 700px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .stores {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 330px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+
+  .socials h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+
+  .logo-img {
+    width: 70px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 60px;
+  }
+
+  .banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Celulares muy pequeños */
+@media (max-width: 400px) {
+  .logo-img {
+    width: 55px;
+    left: 15px;
+    top: 48%;
+    transform: translateY(-50%);
+    max-height: 50px;
+  }
+
+  .banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* --- PINTEREST SECTION --- */
+/* --- PINTEREST PAGE --- */
+/* --- PINTEREST PAGE (optimizada con variables) --- */
+.pinterest {
+  text-align: center;
+  margin: 50px auto 70px;
+  padding: 20px 20px 50px;
+  max-width: 1200px;
+}
+
+.pinterest h1 {
+  color: var(--color-primary);
+  font-size: var(--font-size-h1);
+  font-weight: 700;
+  margin-bottom: var(--spacing-small);
+}
+
+.pinterest p {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+}
+
+.pinterest h2 {
+  color: var(--color-primary);
+  font-size: var(--font-size-h2);
+  margin-bottom: 10px;
+}
+
+
+.pinterest-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 columnas */
+  gap: 40px;
+  /* espacio entre boards */
+  justify-items: center;
+  align-items: start;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+/* versión responsive: 1 board por fila en pantallas chicas */
+@media (max-width: 900px) {
+  .pinterest-gallery {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+
+
+
+/* --- DESTACADO: BOTÓN DE STORE PRINCIPAL CON SHIMMER --- */
+.btn-store {
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(90deg, var(--color-highlight), var(--color-accent));
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 16px 38px;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px color-mix(in srgb, var(--color-highlight) 40%, transparent);
+  transition: all 0.3s ease;
+  margin-block: 50px 80px;
+  overflow: hidden;
+  /* necesario para el brillo */
+}
+
+.btn-store::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -75%;
+  }
+
+  100% {
+    left: 125%;
+  }
+}
+
+.btn-store:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-highlight));
+  box-shadow: 0 10px 22px color-mix(in srgb, var(--color-highlight) 60%, transparent);
+}
+
+/* === COLLECTION BLOCK === */
+.collection-block {
+  margin: 70px auto;
+  text-align: center;
+  max-width: 1200px;
+  padding: 40px 20px;
+  background: color-mix(in srgb, var(--color-white) 60%, transparent);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--color-highlight) 10%, transparent);
+  backdrop-filter: blur(6px);
+}
+
+
+.collection-block h2 {
+  font-size: 1.9rem;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.collection-desc {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  margin-bottom: 25px;
+}
+
+/* === CAROUSEL === */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 0 auto 25px;
+  max-width: 900px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track a {
+  flex: 0 0 100%;
+}
+
+.carousel-track img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.03);
+}
+
+/* === CAROUSEL BUTTONS (optimizadas con variables) === */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: color-mix(in srgb, var(--color-highlight) 60%, transparent);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 10px 16px;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: color-mix(in srgb, var(--color-accent) 80%, transparent);
+}
+
+.carousel-btn.prev {
+  left: 15px;
+}
+
+.carousel-btn.next {
+  right: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-track img {
+    border-radius: 12px;
+  }
+
+  .carousel-btn {
+    font-size: 1.4rem;
+    padding: 8px 12px;
+  }
+}
+
+
+/* === GRID LAYOUT FOR MULTIPLE COLLECTIONS === */
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  margin: 60px auto;
+  max-width: 1400px;
+}
+
+.collections-grid .collection-block {
+  max-width: 420px;
+  padding: 25px 15px;
+}
+
+.collections-grid .carousel-container {
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+
+/* Responsive ajustes */
+@media (max-width: 900px) {
+  .collections-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+}
+
+/* === Title alignment for uniform height (mejorado) === */
+.collections-grid .collection-block h2 {
+  min-height: 3.5em;
+  /* altura suficiente para títulos de dos líneas */
+  display: flex;
+  align-items: center;
+  /* centra verticalmente los de una línea */
+  justify-content: center;
+  /* centra horizontalmente */
+  text-align: center;
+  line-height: 1.3;
+  /* mejor legibilidad */
+  margin-bottom: 10px;
+  /* espacio entre el título y la imagen */
+}
+
+/* Espacio entre filas de colecciones */
+.collections-grid+.collections-grid {
+  margin-top: 80px;
+}
+
+/* Línea decorativa entre filas */
+.section-divider {
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right,
+      color-mix(in srgb, var(--color-highlight) 25%, var(--color-white)),
+      var(--color-highlight),
+      color-mix(in srgb, var(--color-highlight) 25%, var(--color-white)));
+  margin: 60px auto;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+/* === MINI CAROUSEL (HOME ZAZZLE CARD) === */
+.mini-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  margin: 15px auto;
+  max-width: 250px;
+  height: 250px;
+}
+
+.mini-carousel .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.mini-carousel .carousel-track a {
+  flex: 0 0 100%;
+}
+
+.mini-carousel .carousel-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.4s ease;
+}
+
+.mini-carousel .carousel-track img:hover {
+  transform: scale(1.05);
+}
+
+/* === MINI CAROUSEL BUTTONS (actualizado con variables globales) === */
+.mini-carousel .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: color-mix(in srgb, var(--color-highlight) 60%, transparent);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.mini-carousel .carousel-btn:hover {
+  background: color-mix(in srgb, var(--color-accent) 80%, transparent);
+  transform: scale(1.1);
+}
+
+.mini-carousel .carousel-btn.prev {
+  left: 10px;
+}
+
+.mini-carousel .carousel-btn.next {
+  right: 10px;
+}
+
+@media (max-width: 700px) {
+  .mini-carousel {
+    max-width: 200px;
+    height: 200px;
+  }
+}
+
+
+/* === TeePublic Product Icons (optimizadas con variables) === */
+.product-icons {
+  text-align: center;
+  padding: 60px 25px;
+  background: color-mix(in srgb, var(--color-white) 60%, transparent);
+  /* antes rgba(255,255,255,0.6) */
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--color-highlight) 10%, transparent);
+  backdrop-filter: blur(6px);
+  width: 100%;
+  max-width: 1400px;
+  margin: 60px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.product-icons h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 35px 20px;
+  justify-items: center;
+  align-items: start;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 110px;
+}
+
+.icon-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--color-white);
+  padding: 5px;
+}
+
+.icon-item img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.icon-item p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  line-height: 1.2;
+}
+
+
+/* === FIX: follow section compact === */
+.follow-buttons {
+  text-align: center;
+  margin: 30px auto 20px;
+}
+
+.follow-buttons h2 {
+  margin-bottom: 12px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* botones más chicos pero manteniendo estilo */
+.btn-store.btn-small {
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  margin: 0;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--color-highlight) 25%, transparent);
+  width: auto;
+  display: inline-block;
+}
+
+.social-buttons a.btn-store.btn-small {
+  min-width: 180px;
+  /* un poco más ancho para balancear los textos */
+  text-align: center;
+  justify-content: center;
+  /* centra el contenido interno */
+  display: inline-flex;
+  /* mantiene ícono + texto perfectamente alineados */
+  align-items: center;
+  /* centra verticalmente */
+  gap: 6px;
+  /* espacio fijo entre ícono y texto */
+}
+
+/* Ajuste óptico para igualar ancho visual */
+.social-buttons a.btn-store.btn-small[href*="tiktok"] {
+  padding-inline: 26px 30px;
+  /* un poco más de aire lateral derecho */
+}
+
+.social-buttons a.btn-store.btn-small[href*="pinterest"] {
+  padding-inline: 24px 28px;
+  /* mantiene proporción visual pareja */
+}
+
+/* Ajuste óptico final para balancear Pinterest vs TikTok */
+.social-buttons a.btn-store.btn-small[href*="tiktok"] {
+  padding-inline: 28px 32px;
+  /* 2px más a cada lado */
+  letter-spacing: 0.3px;
+  /* iguala la densidad visual */
+}
+
+.content h1 {
+  color: var(--color-primary);
+  /* usa el violeta principal global */
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}

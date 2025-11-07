@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pinterest | Lily's World</title>
+
+  <!-- === META TAGS & SOCIAL PREVIEW === -->
+
+  <!-- Basic Meta -->
+  <meta name="description"
+    content="Welcome to Lily's World — cute & creative art for all occasions! Explore personalized gifts, colorful illustrations, and happy designs from Lily Bond.">
+  <meta name="keywords"
+    content="Lily's World, personalized gifts, cute art, Redbubble, Zazzle, TeePublic, kawaii design, illustration, Lily Bond">
+  <meta name="author" content="Lily Bond">
+
+  <!-- Open Graph (social sharing, local-friendly version) -->
+  <meta property="og:title" content="Lily’s World — Cute & Creative Illustrations">
+  <meta property="og:description"
+    content="Discover personalized gifts, cute art, and colorful designs from Lily Bond. Visit my Zazzle, Redbubble, and TeePublic stores!">
+  <meta property="og:image" content="images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lily’s World">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lily’s World — Cute & Creative Illustrations">
+  <meta name="twitter:description" content="Discover personalized gifts, cute art, and colorful designs.">
+  <meta name="twitter:image" content="images/social_preview.png">
+  <meta name="twitter:image:width" content="1200">
+  <meta name="twitter:image:height" content="630">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Fallback visual si no carga el script */
+    .pinterest-fallback {
+      display: none;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.1rem;
+      color: #7046ff;
+    }
+
+    .pinterest-fallback a {
+      color: #42d9f4;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px dashed #42d9f4;
+      transition: 0.3s ease;
+    }
+
+    .pinterest-fallback a:hover {
+      color: #a25cff;
+      border-color: #a25cff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+ <div id="header"></div>
+
+
+  <!-- MAIN CONTENT -->
+  <section class="pinterest">
+    <h1>✨ Explore Lily’s World on Pinterest</h1>
+    <p>Discover my latest pins, creative ideas, and product inspiration — updated automatically 💜</p>
+
+    <!-- --- BOARDS GRID --- -->
+    <div class="pinterest-gallery">
+
+      <!-- Personalized Gifts Board -->
+      <a data-pin-do="embedBoard"
+        href="https://www.pinterest.com/lilysworldcreations/personalized-gifts-that-stand-out/"
+        data-pin-board-width="500" data-pin-scale-height="280" data-pin-scale-width="80"></a>
+
+      <!-- Zazzle Shop Board -->
+      <a data-pin-do="embedBoard" href="https://www.pinterest.com/lilysworldcreations/lilys-zazzle-shop/"
+        data-pin-board-width="500" data-pin-scale-height="280" data-pin-scale-width="80"></a>
+
+      <!-- Redbubble Shop Board -->
+      <a data-pin-do="embedBoard" href="https://www.pinterest.com/lilysworldcreations/lilys-redbubble-shop/"
+        data-pin-board-width="500" data-pin-scale-height="280" data-pin-scale-width="80"></a>
+
+      <!-- TeePublic Shop Board -->
+      <a data-pin-do="embedBoard" href="https://www.pinterest.com/lilysworldcreations/lilys-teepublic-shop/"
+        data-pin-board-width="500" data-pin-scale-height="280" data-pin-scale-width="80"></a>
+
+    </div>
+
+    <!-- CTA -->
+    <section class="cta">
+      <a href="https://www.pinterest.com/lilysworldcreations/" target="_blank" rel="noopener noreferrer"
+        class="btn-store">
+        ✨ Visit My Pinterest Profile →
+      </a>
+    </section>
+
+    <!-- Fallback si el script no carga -->
+    <div class="pinterest-fallback" id="pinterestFallback">
+      <p>🔗 See all my boards on <a href="https://www.pinterest.com/lilysworldcreations/" target="_blank"
+          rel="noopener noreferrer">Pinterest</a></p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+<div id="footer"></div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+  <!-- Pinterest script -->
+  <script async defer src="https://assets.pinterest.com/js/pinit.js"
+    onerror="document.getElementById('pinterestFallback').style.display='block'"></script>
+</body>
+
+</html>
